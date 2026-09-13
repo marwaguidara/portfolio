@@ -156,7 +156,6 @@ export const SKILLS_DATA: SkillCategory[] = [
     icon: "Wrench",
     skills: [
       { name: "Docker & Docker Compose" },
-      { name: "GitHub Actions (CI/CD)" }
     ]
   }
 ];
@@ -334,7 +333,7 @@ export const EXPERIENCES_DATA: Experience[] = [
       "Prévision des ventes évaluée quantitativement (MAE/RMSE) contre une baseline",
       "Migration complète de base de données documentée, CI/CD avec 286 tests automatisés"
     ],
-    tags: ["Node.js", "Express", "Python", "FastAPI", "MySQL", "Docker", "CI/CD"]
+    tags: ["Node.js", "Express", "Python", "FastAPI", "MySQL", "Docker"]
   },
   {
     period: "2025",
