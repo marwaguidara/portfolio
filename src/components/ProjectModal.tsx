@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState, useCallback } from "react";
+import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   X, 
@@ -41,18 +42,28 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [direction, setDirection] = useState(1);
+  const [mounted, setMounted] = useState(false);
 
-  // Keyboard escape handler
+  // Portal target (document.body) is only reachable on the client,
+  // which keeps the server-rendered markup and the first client render identical.
   useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Scroll-lock the page + keyboard escape handler while the modal is open
+  useEffect(() => {
+    if (!project) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
     };
-    if (project) {
-      document.body.style.overflow = "hidden";
-      window.addEventListener("keydown", handleKeyDown);
-    }
+    window.addEventListener("keydown", handleKeyDown);
+
     return () => {
-      document.body.style.overflow = "unset";
+      document.body.style.overflow = previousOverflow;
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, [project, onClose]);
@@ -102,20 +113,25 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
     })
   };
 
-  if (!project) return null;
+  if (!mounted || !project) return null;
 
   const IconComponent = iconMap[project.iconName] || Code2;
 
-  return (
+  const modal = (
     <AnimatePresence>
-      <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-10 overflow-y-auto">
+      <div
+        role="dialog"
+        aria-modal="true"
+        aria-label={`Détails du projet ${project.title}`}
+        className="fixed inset-0 z-[999] flex items-center justify-center p-4 sm:p-6 md:p-10 overflow-y-auto"
+      >
         {/* Backdrop */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={onClose}
-          className="fixed inset-0 bg-black/80 backdrop-blur-md"
+          className="fixed inset-0 bg-black/90 backdrop-blur-xl"
         />
 
         {/* Modal Container */}
@@ -353,4 +369,9 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
       </div>
     </AnimatePresence>
   );
+
+  // Portalled into <body> so the modal escapes the stacking context created by
+  // `<section id="projects" className="relative z-10">` (and by any transformed
+  // / backdrop-blurred ancestor), instead of being locked under it.
+  return createPortal(modal, document.body);
 };

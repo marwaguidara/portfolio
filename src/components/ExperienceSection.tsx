@@ -14,7 +14,7 @@ import { EXPERIENCES_DATA } from "@/data/portfolioData";
 
 export const ExperienceSection: React.FC = () => {
   return (
-    <section id="experience" className="py-24 relative z-10 scroll-mt-20">
+    <section id="experience" className="py-24 scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
