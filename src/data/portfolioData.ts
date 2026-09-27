@@ -51,7 +51,7 @@ export const PERSONAL_INFO = {
     "Je poursuis actuellement un diplôme d'Ingénieur en Génie Logiciel à l'ISIMS (Institut Supérieur d'Informatique et de Multimédia de Sfax), après une Licence en Big Data obtenue en 2025. Mon parcours combine deux axes : la recherche appliquée en intelligence artificielle (RAG hybrides, NLP, vérification automatique des affirmations générées) et le développement logiciel classique (applications full-stack, bases de données, architecture backend).",
     "Sur mes projets d'IA, j'accorde une attention particulière à la fiabilité : un système qui répond \"je ne sais pas\" quand les preuves sont insuffisantes me semble plus utile qu'un système qui invente une réponse plausible. C'est une préoccupation que j'ai retrouvée sur plusieurs de mes projets (RAG Citation Validator, SciBridge) où j'ai mis en place des mécanismes de vérification et de refus explicite.",
     "Côté développement, je travaille aussi bien avec Python/FastAPI qu'avec des stacks plus classiques (Spring Boot, Node.js, Angular), et j'essaie de garder une démarche rigoureuse : tester ce que j'écris, comprendre un bug avant de le corriger plutôt que de le patcher au hasard, documenter mes choix.",
-    "Pendant ma Licence, j'ai été membre de l'IEEE Student Branch (2022-2023), du Leader Club (2023-2024) et du Microsoft Club (2025)."
+    "Pendant ma Licence, j'ai été membre de l'IEEE Student Branch (2022-2023), du IDER Club (2023-2024) et du Microsoft Club (2025)."
   ],
   keyDifferentiators: [
     {
