@@ -248,7 +248,7 @@ export const PROJECTS_DATA: Project[] = [
     ],
     stack: ["Python", "PyTorch", "DeBERTa", "RoBERTa", "T5", "SHAP", "Scikit-learn", "FastAPI", "Next.js", "Mistral-7B"],
     githubUrl: null,
-    demoUrl: null,
+    demoUrl: "https://www.facebook.com/photo/?fbid=3371271263023603&set=a.149063458577749&__cft__[0]=AZi6RBqgbkZKoo3jL9kMXHrMUwYVTPOu2zIPw7urlm4hl9IhhTpZqODSUIyojZrTJ95YLZwfajtdsXspBDN4vCDPR2D2a26XS1fFyOeDXGpMVzKaifmrTOmdWElKednrKoL0PWb7B8eeMmojXXk&__tn__=EH-R",
     codeStatus: "Rapport académique",
     iconName: "Sprout",
     gradient: "from-emerald-500 via-teal-600 to-cyan-600",

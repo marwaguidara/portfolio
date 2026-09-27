@@ -80,7 +80,7 @@ export const AboutSection: React.FC = () => {
                   IEEE Student Branch (2022-2023)
                 </span>
                 <span className="px-3 py-1 text-xs rounded-full bg-purple-500/10 text-purple-300 border border-purple-500/20 font-medium">
-                  Leader Club (2023-2024)
+                  IDER Club (2023-2024)
                 </span>
                 <span className="px-3 py-1 text-xs rounded-full bg-amber-500/10 text-amber-300 border border-amber-500/20 font-medium">
                   Microsoft Club (2025)

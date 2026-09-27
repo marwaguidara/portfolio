@@ -110,72 +110,7 @@ export const HeroSection: React.FC = () => {
 
           </motion.div>
 
-          {/* Right Column: Abstract Interactive Code / AI Node Terminal Card */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95, y: 30 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            className="lg:col-span-5"
-          >
-            <div className="relative rounded-2xl bg-gradient-to-b from-white/[0.08] to-white/[0.02] p-1 border border-white/15 shadow-2xl backdrop-blur-xl group">
-              
-              {/* Header Bar of mock terminal */}
-              <div className="bg-[#141720] px-4 py-3 rounded-t-xl flex items-center justify-between border-b border-white/10">
-                <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 rounded-full bg-red-500/80" />
-                  <div className="w-3 h-3 rounded-full bg-amber-500/80" />
-                  <div className="w-3 h-3 rounded-full bg-emerald-500/80" />
-                </div>
-                <div className="flex items-center gap-1.5 text-xs text-zinc-400 font-mono">
-                  <Terminal className="w-3.5 h-3.5 text-indigo-400" />
-                  <span>marwa_rag_pipeline.py</span>
-                </div>
-                <div className="text-[10px] text-zinc-500 font-mono">Python 3.11</div>
-              </div>
-
-              {/* Body of Terminal */}
-              <div className="bg-[#0F1117] p-5 rounded-b-xl font-mono text-xs text-zinc-300 space-y-3.5 overflow-hidden">
-                <div className="flex items-center justify-between text-zinc-500 text-[11px] pb-2 border-b border-white/[0.06]">
-                  <span># Verification Pipeline (ISIMS AI Research)</span>
-                  <span className="text-emerald-400 flex items-center gap-1">
-                    <CheckCircle2 className="w-3 h-3" /> VERIFIED
-                  </span>
-                </div>
-
-                <div className="space-y-1 text-zinc-300">
-                  <p><span className="text-purple-400">class</span> <span className="text-amber-300">CitationValidator</span>:</p>
-                  <p className="pl-4"><span className="text-purple-400">def</span> <span className="text-blue-400">evaluate_claim</span>(self, claim, docs):</p>
-                  <p className="pl-8 text-zinc-400"># Dense + BM25 + RRF Fusion</p>
-                  <p className="pl-8">sources = self.hybrid_retriever.query(claim, top_k=<span className="text-amber-400">5</span>)</p>
-                  <p className="pl-8 text-zinc-400"># Cross-Encoder Reranking & NLI Verification</p>
-                  <p className="pl-8">nli_score = self.nli_model.predict(claim, sources)</p>
-                  <p className="pl-8 text-purple-400">if</p> <p className="pl-12">nli_score &lt; <span className="text-amber-400">0.75</span>:</p>
-                  <p className="pl-16 text-emerald-400">return <span className="text-emerald-300">&quot;Données insuffisantes&quot;</span>  <span className="text-zinc-500"># Explicit Refusal</span></p>
-                </div>
-
-                {/* Execution Metrics snippet */}
-                <div className="mt-4 pt-3 border-t border-white/[0.08] grid grid-cols-2 gap-2 text-[11px]">
-                  <div className="bg-indigo-950/40 border border-indigo-500/20 rounded-lg p-2">
-                    <span className="text-zinc-400 block text-[10px]">Faithfulness Score</span>
-                    <span className="text-indigo-300 font-bold">0.942 (RoBERTa-MNLI)</span>
-                  </div>
-                  <div className="bg-amber-950/40 border border-amber-500/20 rounded-lg p-2">
-                    <span className="text-zinc-400 block text-[10px]">Citation Accuracy</span>
-                    <span className="text-amber-300 font-bold">100% Strict Guard</span>
-                  </div>
-                </div>
-
-                {/* Micro Animated Status */}
-                <div className="flex items-center gap-2 pt-1 text-[11px] text-zinc-400">
-                  <Sparkles className="w-3.5 h-3.5 text-indigo-400 animate-spin" />
-                  <span>Pipeline NLI local actif sur Qdrant Vector Store</span>
-                </div>
-              </div>
-
-              {/* Decorative Accent Glow */}
-              <div className="absolute -bottom-3 -right-3 w-24 h-24 bg-gradient-to-tr from-amber-500 to-purple-600 rounded-full blur-2xl opacity-40 group-hover:opacity-70 transition-opacity" />
-            </div>
-          </motion.div>
+          
 
         </div>
       </div>
