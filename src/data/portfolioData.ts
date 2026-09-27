@@ -218,9 +218,8 @@ export const PROJECTS_DATA: Project[] = [
       "Architecture propre découplant backend métier (Node.js) et service prédictif IA (FastAPI)",
       "Prévision Ridge évaluée empiriquement contre baseline naïve (moyenne mobile)",
       "Indicateurs de confiance prédictive et gestion du cas 'Données insuffisantes'",
-      "286 tests automatisés (Jest + Playwright) avec CI/CD GitHub Actions conteneurisée",
-      "Migration intégrale et documentée de base de données (SQLite/PostgreSQL ➔ MySQL)",
-      "Sécurité RBAC 5 rôles, JWT, validation Zod et logs d'audit"
+      "tests automatisés (Jest + Playwright) avec CI/CD GitHub Actions conteneurisée",
+      "Sécurité RBAC 5 rôles, JWT et logs d'audit"
     ],
     stack: ["Node.js/Express", "Knex.js", "MySQL", "Python/FastAPI", "Scikit-learn", "Pandas", "Docker Compose", "GitHub Actions", "Jest", "Playwright"],
     githubUrl: "https://github.com/marwaguidara/patisserie-erp",
@@ -263,11 +262,10 @@ export const PROJECTS_DATA: Project[] = [
     fullDescription: "Système de gestion municipale développé selon le Processus Unifié (Inception ➔ Transition), intégrant une modélisation UML complète (16 cas d'utilisation, diagrammes de séquence, d'activités, de classes et de déploiement).\n\nPermet le signalement citoyen géolocalisé et la planification intelligente via un calendrier dynamique tri-ressources (disponibilité croisée techniciens/équipements/matériaux). Architecture Spring Boot avec persistance XML pure validée par schémas XSD (intégrité référentielle par xs:key/xs:keyref) et frontend Angular 19.",
     tags: ["Génie Logiciel"],
     highlights: [
-      "Modélisation UML exhaustive selon le Processus Unifié (16 cas d'utilisation)",
+      "Modélisation UML exhaustive selon le Processus Unifié",
       "Calendrier de planification intelligent fondé sur la disponibilité tri-ressources",
       "Architecture de persistance 100% XML/XSD avec intégrité référentielle stricte",
-      "Géolocalisation interactive (Leaflet + OpenStreetMap) & génération PDF",
-      "Architecture 4 couches Spring Boot + Angular 19 avec Spring Security & JWT"
+      "Géolocalisation interactive (Leaflet + OpenStreetMap) & génération PDF"
     ],
     stack: ["Java 21", "Spring Boot", "Spring Security", "JWT", "Angular 19", "TypeScript", "XML/XSD", "Leaflet", "iText PDF"],
     githubUrl: "https://github.com/eyadammak2002/sgiiv",
@@ -295,11 +293,11 @@ export const PROJECTS_DATA: Project[] = [
     fullDescription: "Application VR Desktop développée sous Unity dans le cadre d'un module d'eXtended Reality (xR). Propose une immersion complète à travers 6 scènes interconnectées : sélection d'avatar humanoïde (rig Mixamo), salle de sport interactive, historique persistant et tutoriel d'assemblage 3D en 15 étapes.\n\nLe suivi physiologique en temps réel repose sur la formule scientifique MET (Metabolic Equivalent of Task) issue du Compendium d'Ainsworth, validée à 1% près. Propose des caméras multi-vues et des retours haptiques/sonores.",
     tags: ["VR / Unity"],
     highlights: [
-      "Calcul de calories basé sur la méthode scientifique MET (Ainsworth) validé à 1%",
+      "Calcul de calories basé sur la méthode scientifique MET",
       "Tutoriel d'assemblage 3D 15 étapes avec zones d'accroche (snap zones) & feedback sensoriel",
       "Système de caméra multi-mode et dashboard analytique temps réel (vitesse/calories)",
       "Pipeline d'animation complet avec rig humanoïde et retargeting Mixamo",
-      "Rapport et méthodologie de test structurée (unitaire, intégration, E2E)"
+      "Rapport et méthodologie de test structurée"
     ],
     stack: ["Unity", "C#", "Blender 3D", "Mixamo", "PlayerPrefs"],
     githubUrl: null,
